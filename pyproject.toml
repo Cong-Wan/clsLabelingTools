@@ -1,0 +1,11 @@
+[project]
+name = "clsLabelTool"
+version = "1.0.0"
+description = "图片分类标注工具（FastAPI + uvicorn + SQLite + vanilla 前端，零 CDN）"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.165.0",
+    "libarchive-c>=5.3",
+    "python-multipart>=0.0.34",
+    "uvicorn>=0.54.0",
+]

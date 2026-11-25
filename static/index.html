@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Author: wilbur / Version: 1.4 / Date: 2026-11-24 / Description: 标注工具页面骨架（顶栏+视图容器+「使用说明」按钮；经典脚本按依赖序引入 api.js→helpView.js→app.js→taskView.js→labelView.js；零外部资源，零 CDN）；v1.2 顶栏加 helpBtn + 引入 helpView.js；v1.3 顶栏改浅色 brand 结构（brand-logo/brand-name/brand-sub，窄屏隐藏 brand-sub 的 media query 见 CSS）；v1.4 head 加内联 SVG favicon（蓝底圆角方块+白「标」字，与 brand-logo 同视觉，非 ASCII 百分号编码） -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clsLabelTool 图片分类标注工具</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232563eb'/%3E%3Ctext x='32' y='45' font-size='34' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3E%E6%A0%87%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <span class="brand-logo">标</span>
+    <span class="brand-name">clsLabelTool</span>
+    <span class="brand-sub">图片分类标注</span>
+  </div>
+  <span class="topbar-sep"></span>
+  <div id="saveSlot"></div>
+  <div id="annotatorSlot"></div>
+  <button id="helpBtn" class="btn-mini" title="查看使用说明">使用说明</button>
+</header>
+<main id="viewRoot">
+  <div class="loading">初始化中…</div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/helpView.js"></script>
+<script src="js/app.js"></script>
+<script src="js/taskView.js"></script>
+<script src="js/labelView.js"></script>
+<script>
+  clsApp.start();
+</script>
+</body>
+</html>
